@@ -7,7 +7,7 @@ import google.generativeai as genai
 
 # Configure Gemini API
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("gemini-1.5-pro")  # Latest stable model
 chat = model.start_chat(history=[])
 
 # Function to get response
@@ -44,5 +44,3 @@ with col2:
     st.subheader("Chat History📜")
     for role, text in st.session_state['chat_history']:
         st.write(f"**{role}:** {text}")
-
-
