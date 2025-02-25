@@ -41,7 +41,7 @@ with col1:
             st.session_state['chat_history'].append(("Yash AI 🤖", chunk.text))
 
 with col2:
-    st.subheader("Chat History 📜")
+    st.subheader("Chat History📜")
     for role, text in st.session_state['chat_history']:
         st.write(f"**{role}:** {text}")
 
