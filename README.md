@@ -1,56 +1,67 @@
-# Yash AI Chatbot - README
-## Project Overview
-Yash AI is an AI-powered chatbot built with Google Gemini API and Streamlit, designed for real-time
-conversational interactions. It features chat history management, streaming responses, and a clean,
-interactive UI.
-## Features
-- Conversational AI: Powered by Google Gemini (gemini-pro).
-- Interactive UI: Built using Streamlit for ease of use.
-- Session-Based Chat History: Maintains context within a session.
-- Streaming Responses: Ensures smooth, real-time chatbot interactions.
-- Secure API Key Handling: Uses a .env file for API security.
-## Installation & Setup
-1. Clone the Repository:
-```
-git clone <repository_url>
-cd AI_CHATBOT
-```
-2. Install Dependencies:
-```
+🚀 AI Chatbot - Streamlit & MongoDB
+
+📌 Project Overview
+
+This is an AI-powered chatbot application built using Python, Streamlit, and MongoDB, with Google Gemini API for intelligent responses. The chatbot provides a real-time conversational experience and is deployed on AWS EC2 with Docker.
+
+🔗 Live Demo: https://3.83.87.37:8501/
+
+📂 Project Structure
+
+AI_Chatbot/
+│── static/                   # Static files (CSS, JS)
+│── templates/                # UI Components for Streamlit
+│── config/                   # Configuration settings
+│── core/                     # Main chatbot logic
+│── database/                 # MongoDB & SQLite integration
+│── tests/                    # Unit tests
+│── scripts/                  # Utility scripts
+│── deployment/               # Docker & AWS setup
+│── docs/                     # Documentation files
+│── app.py                    # Streamlit application
+│── requirements.txt          # Dependencies
+│── Dockerfile                # Containerization setup
+│── .gitignore                # Ignore unnecessary files
+
+🛠️ Installation & Setup
+
+1️⃣ Clone the Repository
+
+git clone https://github.com/Yaswanth191/Chatbot-Streamlit.git
+cd Chatbot-Streamlit
+
+2️⃣ Install Dependencies
+
 pip install -r requirements.txt
-```
-3. Set Up Environment Variables:
-Create a .env file and add your Gemini API key:
-```
-GEMINI_API_KEY=your_api_key_here
-```
-4. Run the Chatbot:
-```
+
+3️⃣ Run the Application
+
 streamlit run app.py
-```
-## How It Works
-1. User Input: The chatbot takes user queries via the Streamlit UI.
-2. Processing with Gemini API: Sends the input to gemini-pro and retrieves a response.
-3. Streaming Responses: Ensures dynamic, real-time responses.
-4. Chat History Management: Uses st.session_state to track conversations within a session.
-5. Displaying Messages: Shows user and AI messages in a structured chat format.
-## File Structure
-AI_CHATBOT/
-- app.py : Main chatbot logic with Gemini API integration
-- chat.py : Chatbot processing logic (if modularized)
-- qachat.py : Optional Q&A-specific logic
-- vision.py : Optional module for image-based queries
-- requirements.txt: Dependencies
-- .env : Stores API keys securely
-- .gitignore : Ignores sensitive files
-- LICENSE : License details
-## Future Enhancements
-- Persistent Memory: Store chat history in a database (SQLite, Firebase, Redis).
-- Knowledge Base (RAG): Enhance chatbot accuracy using FAISS/Pinecone.
-- Multimodal Support: Extend chatbot to handle images via Gemini Vision models.
-- Cloud Deployment: Deploy on AWS, GCP, or Render using Docker for scalability.
-- Fine-Tuning: Experiment with domain-specific datasets for better performance.
-## License
+
+👉 The chatbot will be available at http://localhost:8501/
+
+📦 Deployment on AWS EC2 with Docker
+
+1️⃣ Build and Run Docker Container
+
+docker build -t ai-chatbot .
+docker run -d -p 8501:8501 ai-chatbot
+
+2️⃣ Access the Chatbot
+
+Go to: http://your-ec2-ip:8501/
+
+🔍 Features
+
+✔️ Conversational AI using Google Gemini API✔️ Interactive Streamlit UI✔️ MongoDB Integration for chat history✔️ Show/Hide Chat History Feature✔️ Deployed on AWS EC2 with Docker
+
+📝 License
+
 This project is licensed under the MIT License.
----
-Want to enhance Yash AI? Let's collaborate!# Chatbot-Streamlit
+
+👤 Maintainer
+
+Yaswanth Panchakarla📧 yaswanthpanchakarla1@gmail.com🔗 GitHub: Chatbot-Streamlit
+
+🚀 Contributions are welcome! Feel free to fork, create issues, and submit PRs.
+
