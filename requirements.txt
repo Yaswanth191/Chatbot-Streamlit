@@ -1,3 +1,8 @@
 streamlit
+pymongo[srv]
 python-dotenv
 google-generativeai
+requests
+numpy
+pandas
+regex
